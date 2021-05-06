@@ -67,4 +67,28 @@
 .note-edit-area {
   height: 50vh;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 25px;
+}
+
+.note-header-input,
+.note-content-input {
+  padding: 10px;
+  font-weight: bold;
+  display: block;
+  resize: none;
+  width: 100%;
+
+  margin-bottom: 20px;
+  height: calc(50vh - 130px);
+}
+.note-header-input {
+  height: 50px;
+  font-size: 23px;
+}
+.markdown-area {
+  overflow-y: scroll;
+  /* background-color: gray; */
+  height: 50vh;
+  padding: 25px;
+  font-weight: bold;
 }
