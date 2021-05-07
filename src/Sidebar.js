@@ -20,7 +20,11 @@ const Sidebar = ({ onAddCallback, notes }) => {
                 </div>
                 <div className="note-content">{note.body}</div>
                 <div className="last-modified">
-                  Last Modified: {note.lastModified}
+                  Last Modified:{" "}
+                  {new Date(note.lastModified).toLocaleDateString("en-GB", {
+                    hour: "2-digit",
+                    minute: "2-digit"
+                  })}
                 </div>
               </div>
             );
