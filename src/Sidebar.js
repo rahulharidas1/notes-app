@@ -1,6 +1,6 @@
 import "./styles.css";
 
-const Sidebar = ({ onAddCallback, notes }) => {
+const Sidebar = ({ onAddCallback, notes, onDeleteCallback }) => {
   return (
     <>
       <div className="sidebar-content">
@@ -16,7 +16,12 @@ const Sidebar = ({ onAddCallback, notes }) => {
               <div className="sidebar-note" key={id}>
                 <div className="sidebar-note-header">
                   <h4>{note.title}</h4>
-                  <button className="button-style">Delete</button>
+                  <button
+                    className="button-style"
+                    onClick={() => onDeleteCallback(note.id)}
+                  >
+                    Delete
+                  </button>
                 </div>
                 <div className="note-content">{note.body}</div>
                 <div className="last-modified">

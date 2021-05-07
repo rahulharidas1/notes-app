@@ -17,9 +17,16 @@ export default function App() {
     console.log("Hey!");
     setNotes([noteContent, ...notes]);
   };
+  const onDeleteCallback = (id) => {
+    setNotes(notes.filter((note) => id !== note.id));
+  };
   return (
     <div className="App">
-      <Sidebar onAddCallback={onAddCallback} notes={notes} />
+      <Sidebar
+        onAddCallback={onAddCallback}
+        notes={notes}
+        onDeleteCallback={onDeleteCallback}
+      />
       <Main />
     </div>
   );
