@@ -52,6 +52,13 @@
   display: flex;
   justify-content: space-between;
 }
+.last-modified {
+  font-size: 13px;
+  padding: 5px 0px;
+}
+.note-content {
+  padding: 5px 0px;
+}
 
 .sidebar-note.active {
   background-color: #3b82f6;

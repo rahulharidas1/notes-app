@@ -33,7 +33,9 @@ const Sidebar = ({
                     Delete
                   </button>
                 </div>
-                <div className="note-content">{note.body}</div>
+                <div className="note-content">
+                  {note.body && note.body.substr(0, 100) + " ..."}
+                </div>
                 <div className="last-modified">
                   Last Modified:{" "}
                   {new Date(note.lastModified).toLocaleDateString("en-GB", {

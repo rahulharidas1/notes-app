@@ -13,7 +13,8 @@ export default function App() {
     var noteContent = {
       id: uuid(),
       title: "Untitled",
-      body: "Random Text!",
+      body:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a dolor nibh. Aliquam eu ex enim. Cras egestas eros non auctor bibendum. Etiam feugiat ligula vel ullamcorper porttitor. Praesent at accumsan erat. Donec in pulvinar velit. Sed vitae urna ac velit fringilla dapibus. Praesent justo leo, dapibus a nunc sed, suscipit mollis libero. Nullam id fringilla magna.",
       lastModified: Date.now()
     };
     console.log("Hey!");
