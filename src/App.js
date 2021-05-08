@@ -7,6 +7,8 @@ import uuid from "react-uuid";
 
 export default function App() {
   const [notes, setNotes] = useState([]);
+  const [activeNote, setActiveNote] = useState(false);
+
   const onAddCallback = () => {
     var noteContent = {
       id: uuid(),
@@ -26,6 +28,8 @@ export default function App() {
         onAddCallback={onAddCallback}
         notes={notes}
         onDeleteCallback={onDeleteCallback}
+        activeNote={activeNote}
+        setActiveNote={setActiveNote}
       />
       <Main />
     </div>

@@ -1,6 +1,12 @@
 import "./styles.css";
 
-const Sidebar = ({ onAddCallback, notes, onDeleteCallback }) => {
+const Sidebar = ({
+  onAddCallback,
+  notes,
+  onDeleteCallback,
+  activeNote,
+  setActiveNote
+}) => {
   return (
     <>
       <div className="sidebar-content">
@@ -13,7 +19,11 @@ const Sidebar = ({ onAddCallback, notes, onDeleteCallback }) => {
         <div className="sidebar-notes">
           {notes.map((note, id) => {
             return (
-              <div className="sidebar-note" key={id}>
+              <div
+                className={`sidebar-note ${note.id === activeNote && "active"}`}
+                key={id}
+                onClick={() => setActiveNote(note.id)}
+              >
                 <div className="sidebar-note-header">
                   <h4>{note.title}</h4>
                   <button
